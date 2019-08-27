@@ -2,6 +2,7 @@ fizz = int(input("Введите число Fizz: "))
 buzz = int(input("Введите число Buzz: "))
 number = int(input("Введите последнее число: "))
 
+#Initializing list to collect numbers and letters in a single string
 string_list = []
 
 for i in range(1, number+1):
