@@ -1,8 +1,9 @@
 import sys
 
-filename = sys.argv[1]
+filename1 = sys.argv[1]
+filename2 = sys.argv[2]
 
-f = open(filename, 'r')
+f = open(filename1, 'r')
 
 first_string = list(f)[0].split()
 
@@ -24,9 +25,11 @@ for i in range(1, number+1):
        i
    string_list.append(str(i))
 
-file2 = open("text2.txt","w+")
+f2 = open(filename2,"w+")
 
-file2.write(" ".join(string_list))
+f2.write(" ".join(string_list))
+
+print("The result has been written to {}".format(filename2))
 
 f.close()
-file2.close()
+f2.close()
