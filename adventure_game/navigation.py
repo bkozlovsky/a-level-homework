@@ -1,16 +1,19 @@
 from PIL import Image
 
+#указываем расположение файла карты в файловой системе
 map_image = Image.open('map.jpg')
 
 coordinates = {'зеленая': [1, 11], 'желтая': [2, 12], 'красная': [3, 13], 'коворкинг': [4, 21], 'ресепшн': [5, 22], 'коричневая': [6, 23], 'макдональдс': [7, 31], 'коридор': [8, 32], 'уборная': [9, 33]}
 
 actions = {'Вперед':'W', 'Назад':'S', 'Влево':'A', 'Вправо':'D', 'Телепорт': 'T', 'Лифт': 'L', 'Показать карту': 'M'}
 
+#инициализируем обработчик исключений
 try:
     direction_request = int(input('\nВведи цифру локации, откуда хочешь начать: \n\n' + "\n".join([" \n".join(str(index)) + " - " + loc for index, loc in enumerate(coordinates.keys(), 1)]) + "\n ------------------ \n\n"))
 except ValueError:
     direction_request = int(input("\nЭй! Я же попросил цифру :) Давай еще разок. \n ------------------ \n\n"))
 
+#сравниваем введенное пользователем значение с координатой в словаре coordinates и присваиваем координату карты
 direction_request = str([i[1] for i in list(coordinates.values()) if i[0] == direction_request][0])
 
 while True:
