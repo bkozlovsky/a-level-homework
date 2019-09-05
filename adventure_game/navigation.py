@@ -18,8 +18,13 @@ except ValueError:
     while True:
         direction_request = input("\nНеверные данные. Давай еще разок. \n ------------------ \n\n")
         if direction_request.isdigit():
-            direction_request= int(direction_request)
-            break
+            if int(direction_request) > len(list(coordinates.keys())) or int(direction_request) < 0:
+                continue
+            else:
+                direction_request = int(direction_request)
+                break
+        else:
+            continue
             
 #сравниваем введенное пользователем значение с координатой в словаре coordinates и присваиваем координату карты
 direction_request = str([i[1] for i in list(coordinates.values()) if i[0] == direction_request][0])
