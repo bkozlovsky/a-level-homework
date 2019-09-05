@@ -12,9 +12,11 @@ try:
     direction_request = int(input('\nВведи цифру локации, откуда хочешь начать: \n\n' + 
         "\n".join([" \n".join(str(index)) + " - " + loc for index, loc in enumerate(coordinates.keys(), 1)]) + 
         "\n ------------------ \n" + "\n"))
+    while direction_request > len(list(coordinates.keys())):
+            direction_request = int(input(("\nВведено неправильное число. Попробуй еще раз.\n ------------------ \n\n")))
 except ValueError:
     while True:
-        direction_request = input("\nЭй! Я же попросил цифру :) Давай еще разок. \n ------------------ \n\n")
+        direction_request = input("\nНеверные данные. Давай еще разок. \n ------------------ \n\n")
         if direction_request.isdigit():
             direction_request= int(direction_request)
             break
