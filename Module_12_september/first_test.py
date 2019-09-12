@@ -9,8 +9,6 @@ def spam(number):
     но не работает. Любым способом заставьте ее работать.
     '''
     return ('bulochka' * int(number))
-    
-    #return ['bulochka' for i in range(number+1)]
 
 
 def my_sum(list_of_numbers):
@@ -23,7 +21,7 @@ def my_sum(list_of_numbers):
     Не использовать встроенные функции суммирования.
     
     """
-    pass
+    pass   
     summ = 0
     for n in list(list_of_numbers):
         summ = summ + n
