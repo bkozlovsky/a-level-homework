@@ -368,13 +368,12 @@ console.log(alt1.join(' '))
  "1x2=2; 2x2=4"
 И выходим и останавливаем цикл, когда будет 6 умножнить на 6 */
 
-let i = 1
 let j = 1
 
 let arr = []
 
 while (j <= 6) {
-    while (i <= 6) {
+    for (i = 1; i <= 6; i++) {
         let mult = j * i
         result = [`${j}x${i}=${mult}`]
         arr.push(result)
