@@ -1,0 +1,10 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.banditEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylamaEnabled": false,
+    "python.venvPath": "~/.virtualenvs",
+    "python.jediEnabled": false,
+    "python.pythonPath": "/home/bkozlovskyi/.virtualenvs/django_practice/bin/python",
+    "python.linting.enabled": true
+}
