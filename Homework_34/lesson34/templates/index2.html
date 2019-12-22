@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if number|divisibleby:2 %}
+        <h1 style="background-color: green">You won ! The number is: {{ number }} and it is even.</h1>
+    {% else %}
+        <h1 style="background-color: red">You lost! The number is: {{ number }} and it is odd.</h1>
+    {% endif %}
+{% endblock %}

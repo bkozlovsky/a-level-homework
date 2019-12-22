@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% if text|length|divisibleby:2 %}
+        <h1 style="background-color: green">You won! The string is: {{ text }} and it's length is {{ text|length }} chars.</h1>
+    {% else %}
+        <h1 style="background-color: red">You lost! The string is: {{ text }} and it's length is {{ text|length }} chars.</h1>
+    {% endif %}
+{% endblock %}

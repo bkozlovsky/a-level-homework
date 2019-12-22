@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <header>
+        <h1>Добро пожаловать на сайт</h1>
+        <img src="https://picsum.photos/200/300">
+    </header>
+{% endblock %}
+
+{% block content %}
+    <a href="{{int_url}}">
+        <button class="button">Visit Page 2</button>
+    </a>
+    <p></p>
+    <a href="{{str_url}}">
+        <button class="button">Visit Page 3</button>
+    </a>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <p>
+            <a href="http://127.0.0.1:8000/">
+                <button class="button">Visit Home</button>
+            </a>
+        </p>
+        <p>Copyright © <time datetime="2019">2019</time>
+        A-Level Programming School</p>
+        <address>Kharkiv, Ukraine</address>
+    </footer>
+{% endblock %}
