@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nickname: {{ nickname }}</p>
+    <p>Gender: {{ gender }}</p>
+    <p>Age: {{ age }}</p>
+    <p>Species: {{ species }}</p>
+    <p>Total visits: {{ all_visits.count }}</p>
+    <p>Arrival Date: {{ arrival_date }}</p>
+    <p>Visits for 5 last minutes: </p>
+    <p style="text-align: center">
+        <form action="{% url 'startpage' %}">
+            <button>Go Home</button>
+        </form>
+    </p>
+</body>
+</html>
